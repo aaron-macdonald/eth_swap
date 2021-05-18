@@ -1,0 +1,41 @@
+=======
+Truffle
+=======
+
+// View EthSwap
+truffle migrate
+truffle console // To enter Truffle (Java)
+
+contract = await EthSwap.deployed() // Async command 'await'
+contract
+contract.address
+name = await contract.name()
+name
+
+.exit // To exit Truffle back to command prompt
+
+//After Adding Token
+truffle migrate --reset
+truffle console // To enter Truffle (Java)
+
+token = await Token.deployed()
+token
+
+balance = await token.balanceOf('0x68BcfD44575EDece67ec0Dcc583b59C2D3979472')
+balance
+balance.toString()
+
+// After Transfering to EthSwap
+truffle migrate --reset
+truffle console // To enter Truffle (Java)
+
+ethSwap = await EthSwap.deployed()
+ethSwap.address
+
+token = await Token.deployed()
+token.address
+balance = await token.balanceOf(ethSwap.address)
+balance.toString()
+
+
+
