@@ -1,0 +1,9 @@
+git  status
+
+git add .
+
+git commit -m "commit comment"
+
+git status
+
+git push --set-upstream origin buyTokens //branch name
