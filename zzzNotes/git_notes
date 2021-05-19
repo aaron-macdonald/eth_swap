@@ -1,3 +1,13 @@
+//===========================
+// Branches
+//===========================
+master
+buyTokens
+sellTokens
+
+//===========================
+// Basic Git Commands
+//===========================
 git  status
 
 git add .
@@ -7,3 +17,7 @@ git commit -m "commit comment"
 git status
 
 git push --set-upstream origin buyTokens //branch name
+
+// To merge the branch into master - after commiting and pushing
+git checkout master
+git merge branchName
